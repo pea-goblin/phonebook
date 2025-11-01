@@ -1,1 +1,1 @@
-
+- node mongo.js [username] [password] [name] [number]
