@@ -1,0 +1,24 @@
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+    "name" : "ABC Learning English",
+    "number" : "12345-434"
+}
+
+###
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+    "name" : "ABC Learning English"
+}
+
+###
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+"name" : "Ada Lovelace",
+"number" : "12345-434"
+}
