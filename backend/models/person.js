@@ -2,14 +2,6 @@ const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', false);
 
-mongoose.set('toJSON', {
-    transform: (d, r) => {
-        r.id = r._id.toString();
-        delete r._id;
-        delete r.__v;
-    }
-}
-)
 const personSchema = mongoose.Schema({
     name: {
         type: String,
@@ -38,5 +30,13 @@ const personSchema = mongoose.Schema({
         require: true
     }
 });
+
+mongoose.set('toJSON', {
+    transform: (d, r) => {
+        r.id = r._id.toString();
+        delete r._id;
+        delete r.__v;
+    }
+})
 
 module.exports = mongoose.model('Person', personSchema); 
